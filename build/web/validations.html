@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function validate(){
+                var a=document.getElementById("n1").value;
+                var b=document.getElementById("a1").value;
+                var c=document.getElementById("m1").value;
+                var d=document.getElementById("l1").value;
+                var e=document.getElementById("e1").value;
+                var f=document.getElementById("d1").value;
+                var x=/^\d{10}$/;
+                var y=/^[A-Za-z]+$/;
+                if(a==""){
+                    alert("Enter name");
+                    return false;
+                }
+               // if(a.length<5)||(a.length>10){
+               //     alert("name must be between  5 to 10");
+               //     return false;
+             //   }
+                if(b=="")
+                {
+                    alert("Enter age");
+                    return false;
+                }
+                if(f=="")
+                {
+                    alert("Enter date");
+                    return false;
+                }
+                if(c=="")
+                {
+                    alert("Enter mobile number");
+                    return false;
+                }
+            //    if((c.length==10)&&(c.match(x)){}
+            //    else{ 
+             //       alert("Invalid number");
+                    return false;
+                }
+                if(d=="")
+                {
+                    alert("Enter lastname");
+                    return false;
+                }if(e=="")
+                {
+                    alert("Enter email");
+                    return false;
+                }
+                
+                
+                
+            }
+            </script>
+    </head>
+    <body>
+        <form action="one.jsp" method="get" onsubmit="return validate()">
+            Name:<input type="text" name="name" id="n1">
+            <br><br>
+            Age:<input type="text" name="age" id="a1"><br><br>
+            Mobile:<input type="text" name="mob" id="m1"><br><br>
+            lname:<input type="text" name="na" id="l1"><br><br>
+            email:<input type="text" name="mail" id="e1"><br><br>
+            Date:<input type="date" name="date" id="d1"><br><br>            
+             <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

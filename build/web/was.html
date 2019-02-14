@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<body>
+    <script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name==""){  
+      alert("Username can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters");  
+      return false;  
+      }  
+    }  
+    </script>  
+    <body> 
+        <center> <h1>LogIn </h1>
+                <body style="background-image:url(e2.png)">
+    <form name="myform" method="post" action="bb.html" onsubmit="return validateform()" >  
+    Username: <input type="text" name="name"><br/> </br>
+    Password: <input type="password" name="password"><br/> </br>
+    <input type="submit" value="register">  
+    </form>  
+        </center>
+</body>
+</html>
+
+ 

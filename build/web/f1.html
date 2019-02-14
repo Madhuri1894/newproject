@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+     	<center><body style="background-image:url(t1.png)">
+                
+                <script>
+          function validateForm() {
+                var Firstname = document.getElementById("ffn").value;
+		var lastname = document.getElementById("lln").value;
+		var username = document.getElementById("mmn").value;
+	        var password = document.getElementById("pd").value;
+		var mobileno=document.getElementById("mbn").value;
+                var email=document.getElementById("eml").value;
+		var dob=document.getElementById("dob").value;
+                var location=document.getElementById("lcn").value;		
+		var letters = /^[A-Za-z]+$/;
+                var phoneno = /^\d{10}$/;
+                if(Firstname==""){
+			alert("enter the firstname");
+			return false;}					
+		if(lastname==""){
+			alert("enter the lastname");
+			return false;}				
+		if(usrename.match(letters)){ }				
+                else{
+                    alert("User name should not be empty");
+                    return false;}
+                if(password==""){
+                    alert("enter the password");
+                    return false;}
+                if(mobileno==""){		
+                    alert("enter the mobile number");
+                    return false;}
+		if(mobileno.length==10 && mobile.match(phoneno)){}						
+		else{
+                    alert("Invalid mobile number");
+                    return false;}
+                if(email==""){
+                    alert("enter the mail");
+                    return false;}																			
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){}
+                else{
+                    alert("Invalid Email");
+                    return false;}
+                if(location==""){
+                    alert("enter the location");
+                    return false;}	
+            }s
+        </script>		
+		<h1>Register</h1>
+		<form method="post" action="db.jsp">
+		First name:<input type="text" name="fn" id="ffn"><br><br>
+		Last name:<input type="text" name="ln" id="lln"><br><br>
+                Username:<input type="text" name="un" id="mmn"><br><br>
+		Password:<input type="password" name="pwd" id="pd"><br><br>
+		mobile no:<input type="text" name="mn" id="mbn"><br><br>
+		email:<input type="text" name="eid" id="eml"><br><br>
+		DOB:<input type="date" name="dt" id="dob"><br><br>
+		location:<input type="text" name="ads" id="lcn"><br><br>
+		<input type="Submit" value="submit">
+		</input>
+	</form>
+	</body>
+        </center>
+    </head>
+</html>
